@@ -60,6 +60,13 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 MALLOC_SVELTE := true
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 
+# Define whether the target device uses Qualcomm hardware
+ifeq ($(TARGET_USES_QCOM_HARDWARE),true)
+    # If the target device uses Qualcomm hardware, include specific configurations and flags
+    TARGET_CFLAGS += -DUSE_QCOM_HARDWARE
+    TARGET_LDFLAGS += -lqcom_library
+endif
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
