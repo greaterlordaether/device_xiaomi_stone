@@ -406,6 +406,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     GoogleDialer
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Overlays
 PRODUCT_PACKAGES += \
     NotchBarKiller
