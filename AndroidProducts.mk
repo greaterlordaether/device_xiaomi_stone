@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2023 The bananaOS Project
+# Copyright (C) 2023 The EverestOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_stone.mk
+    $(LOCAL_DIR)/everest_stone.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_stone-user \
-    blaze_stone-userdebug \
-    blaze_stone-eng
+    everest_stone-user \
+    everest_stone-userdebug \
+    everest_stone-eng

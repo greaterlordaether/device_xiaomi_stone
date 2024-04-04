@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common banana stuff.
-$(call inherit-product, vendor/blaze/config/common.mk)
+# Inherit some common Everest stuff.
+$(call inherit-product, vendor/everest/config/common.mk)
 
 # Inherit from stone device
 $(call inherit-product, device/xiaomi/stone/device.mk)
@@ -20,19 +20,17 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_DISABLE_EPPE := true
 TARGET_DEBLOAT := true
-
-#Blaze Flags
-WITH_GAPPS := true
-BLAZE_MAINTAINER := Nomi noob
-
-# Charging Animation
+EVEREST_MAINTAINER := "Nomi Noob"
+TARGET_USES_LAWNCHAIR := false
 TARGET_USE_PIXEL_CHARGER := true
 
-# Use Prebuilt Kernel
-#PREBUILT_KERNEL := true
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_stone
+PRODUCT_NAME := everest_stone
 PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
